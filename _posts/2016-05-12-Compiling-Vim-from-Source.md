@@ -2,9 +2,8 @@
 layout: post
 title: Compiling vim with some kind of GUI from source for Python development. 
 ---
-# Compiling vim with some kind of GUI from source for Python development. 
 
-This post builds on the process described [here][main_link]. 
+This post builds on the process described [here][https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source]. 
 
 ## System
 
@@ -32,5 +31,3 @@ Step 3: We need to compile it with python and python3 interpreters enabled so ru
 ```
 ./configure --with-features=huge --enable-multibyte --enable-pythoninterp --enable-python3interp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu --with-python3-config-dir=/usr/lib/python3.4/config-3.4m-x86_64-linux-gnu --enable-gui --prefix=$HOME/vim
 ```
-
-[main_link] https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source
