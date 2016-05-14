@@ -27,19 +27,25 @@ or
 Here is a list of dependencies I installed. This is by no means an exhaustive list, but it worked for me. 
 
 ```
-sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev 
+sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
+libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev 
 ```
 
 ### Method
 
 Step 1: If you have previously built Vim from source, go to your source folder `/something/vim/src`, run `make uninstall` and then `make distclean`.
 
-Step 2: Make sure python libraries are installed first. the packages are `python-dev` and `python3-dev` and running `python-config --configdir` and `python3-config --configdir`
+Step 2: Make sure python libraries are installed first. the packages are `python-dev` and `python3-dev`. The config directories for python need to be given as input to
+the build config script. The variables are `--with-python-config-dir` and `--with-python-config-dir`. You can get these by running `python-config --configdir` and `python3-config --configdir`, respectively. 
 
-Step 3: We need to compile it with python and python3 interpreters enabled so run:
+Step 3: Configure the build.
 
 ```
-./configure --with-features=huge --enable-multibyte --enable-pythoninterp --enable-python3interp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu --with-python3-config-dir=/usr/lib/python3.4/config-3.4m-x86_64-linux-gnu --enable-gui --prefix=$HOME/vim
+./configure --with-features=huge --enable-multibyte --enable-pythoninterp --enable-python3interp\
+ --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \
+ --with-python3-config-dir=/usr/lib/python3.4/config-3.4m-x86_64-linux-gnu \
+ --enable-gui \
+ --prefix=$HOME/vim
 ```
 
 Step 4: The final step is to run 
