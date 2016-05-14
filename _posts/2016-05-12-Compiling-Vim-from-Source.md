@@ -1,27 +1,36 @@
 ---
 layout: post
-title: Compiling vim with some kind of GUI from source for Python development. 
+title: How to build Vim from source without root access. 
 ---
 
-This post builds on the process described [here](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
-
-## System
-
-1. Ubuntu 14.04 
-2. Architecture x86_64
+This post builds on the process described [here](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source). However, in my case, I did not have root access, so `sudo` commands
+don't work. However, I realized I can still install software using Ubuntu Software Center. Also, this was the first step to building a highly portable Python development environment. 
 
 
-## Method
+### System
+
+1. OS: Ubuntu 14.04 
+2. Arch: x86_64
+3. Compiler: gcc 4.8.4
+
+
+### Prerequisites
 
 Make sure you have the required dependencies installed. If you have root access to your machine, you can do this by running 
 
 ```
-sudo apt-get build-dep vim
+sudo apt-get build-dep vim-gtk
 ```
 
-I do not have root access, so I am using the Ubuntu Software Center to install dependencies manually. Here is a list of dependencies I installed.
-This is by no means an exhaustive list, but it worked for me. 
+or
 
+Here is a list of dependencies I installed. This is by no means an exhaustive list, but it worked for me. 
+
+```
+sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev 
+```
+
+### Method
 
 Step 1: If you have previously built Vim from source, go to your source folder `/something/vim/src`, run `make uninstall` and then `make distclean`.
 
