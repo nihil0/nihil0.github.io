@@ -28,6 +28,7 @@ Step 1: If you have previously built Vim from source, go to your source folder `
 Step 2: Make sure python libraries are installed first. the packages are `python-dev` and `python3-dev` and running `python-config --configdir` and `python3-config --configdir`
 
 Step 3: We need to compile it with python and python3 interpreters enabled so run:
+
 ```
 ./configure --with-features=huge --enable-multibyte --enable-pythoninterp --enable-python3interp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu --with-python3-config-dir=/usr/lib/python3.4/config-3.4m-x86_64-linux-gnu --enable-gui --prefix=$HOME/vim
 ```
