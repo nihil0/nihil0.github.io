@@ -32,3 +32,10 @@ Step 3: We need to compile it with python and python3 interpreters enabled so ru
 ```
 ./configure --with-features=huge --enable-multibyte --enable-pythoninterp --enable-python3interp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu --with-python3-config-dir=/usr/lib/python3.4/config-3.4m-x86_64-linux-gnu --enable-gui --prefix=$HOME/vim
 ```
+
+Step 4: The final step is to run 
+
+```
+make && make install 
+```
+
