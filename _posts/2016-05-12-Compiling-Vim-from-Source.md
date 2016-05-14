@@ -3,7 +3,7 @@ layout: post
 title: Compiling vim with some kind of GUI from source for Python development. 
 ---
 
-This post builds on the process described [here][https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source]. 
+This post builds on the process described [here](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
 
 ## System
 
