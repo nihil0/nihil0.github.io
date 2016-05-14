@@ -1,11 +1,8 @@
 ---
 layout: post
-title: You're up and running!
+title: Compiling vim with some kind of GUI from source for Python development. 
 ---
-
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
-
-![_config.yml]({{ site.baseurl }}/images/config.png)
+![_config.yml]({{ site.baseurl}}/images/config.png)
 
 # Compiling vim with some kind of GUI from source for Python development. 
 
