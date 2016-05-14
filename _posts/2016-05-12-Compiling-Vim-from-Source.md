@@ -2,8 +2,6 @@
 layout: post
 title: Compiling vim with some kind of GUI from source for Python development. 
 ---
-![_config.yml]({{ site.baseurl}}/images/config.png)
-
 # Compiling vim with some kind of GUI from source for Python development. 
 
 This post builds on the process described [here][main_link]. 
